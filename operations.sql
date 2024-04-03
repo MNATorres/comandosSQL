@@ -1,0 +1,11 @@
+-- resolver esta tabla clase 10
+
+CREATE TABLE IF NOT EXISTS operations (
+ operation_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,,
+ book_id INT UNSIGNED,
+ client_id INT UNSIGNED,
+ type ENUM('prestado', 'devuelto', 'vendido') NOT NULL,
+ created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ update_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ finshed TINYINT(1) NOT NULL
+);
